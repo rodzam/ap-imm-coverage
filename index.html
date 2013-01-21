@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="custom.css" />
+<link rel="stylesheet" type="text/css" href="tooltipster.css" />
+
+<title>AP Reporting on Immigration (2007-2011)</title>
+<body>
+
+<script src="libraries/d3.v3.min.js"></script>
+<script src="libraries/topojson.v0.min.js"></script>
+<script src="libraries/queue.v1.min.js"></script>
+<script src="libraries/jquery-1.9.0.min.js"></script>
+<script src="libraries/jquery.tooltipster.min.js"></script>
+
+<script src="custom/custom-mousemove.js"></script>
+<script src="custom/custom-tooltipster.js"></script>
+
+<div id="header"><h3>AP Reporting on Immigration (2007-2011)</h3></div>
+<div id="map">
+<script src="custom/custom-createmap.js"></script>
+</div><br>
+
+<div id="settingspanel">
+	<p class="header">Settings:</p><form>
+	<p class="options">Show story frequency circles? <select id="centroid_yn" onchange="changecentroids()"><option value="1" selected>Yes</option><option value="2">No</option></select></p>
+	<p class="options">Color-code map based on percentage of foreign-born population? <select id="county_yn" onchange="changemapcolor()"><option value="1">Yes</option><option value="2">No</option></select></p></form>
+	<br><p class="header">Description:</p>
+	<p class="description">The number of immigration-related stories disseminated by <i>The Associated Press</i> between Jan. 1, 2007 and Dec. 31, 2011, laid on top of Census Bureau estimates of the percentage of foreign-born individuals living in each U.S. county.</p>
+	<br><p class="header">Sources:</p>
+	<ul class="sourcelist">
+	<li><a href="http://www.lexisnexis.com/" class="tooltip" title="Data for <i>The Associated Press</i> stories were derived from the LexisNexis news database, with the researcher downloading and scraping all results.<br><br>For inclusion in the sample, the articles had to contain the keywords 'immigration','immigrant', or 'immigrants' in either the headline or the lead of the article.<br><br>Articles that were less than 250 words (briefs) were excluded. Data were subsequently dupechecked using fuzzy string comparison.">LexisNexis</a></li>
+	<li><a href="http://maps.yahoo.com/" class="tooltip" title="Geocoding of the datelines of each article was done with GPS Visualizer, using Yahoo!'s geocoding engine.">Yahoo!</a></li>
+	<li><a href="http://www.census.gov/acs/" class="tooltip" title="Foreign-born population data are taken from Table B05001 (Nativity and Citizenship Status in the United States) of the 2007-2011 Summarized Data file of the American Community Survey. Data were extracted using BetaDataFerrett.<br><br>The following categories were considered 'foreign-born':<ul style='padding-left: 10px; list-style-type:square;'><li>U.S. Citizen, born in P.R. or U.S. Islands</li><li>U.S. Citizen, born abroad of American parent(s)</li><li>U.S. Citizen by Naturalization</li><li>Not a U.S. Citizen</li></ul>">American Community Survey</a></li>
+	</ul>
+</div>
+
+<div id="infobox">
+  <span id="name" class="header">City Name</span>
+  <br>
+  <span class="variable">Number of Stories: </span>
+  <span id="amount" class="variable"># of Stories</span>
+</div> 
+
+<div id="footer">Created by Rodrigo Zamith using <a href="http://www.d3js.org" class="tooltip" title="Additional libraries include: jQuery and Tooltipster.">D3.js</a>. Licensed under <a href="http://creativecommons.org/licenses/by-nc/3.0" class="tooltip" title="This license lets you remix, tweak, and build upon this work non-commercially, provided you acknowledge the author; additionally derivative works do not have to be licensed under these terms.">CC BY-NC</a> terms.</div>
+</body>

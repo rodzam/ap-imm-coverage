@@ -1,0 +1,147 @@
+/* ### Document information ### */
+body {
+text-align: center;
+background-color: #fff;
+}
+
+
+/* ### Header ### */
+#header {
+	width: 100%;
+	text-align: center;
+	margin-bottom: -40px;
+}
+
+#header h3 {
+	font: normal 2em arial, sans-serif;
+	text-align: center;
+}
+
+
+/* ### Map Information ### */
+/* Counties */
+.counties {
+  fill: #ccc;
+}
+
+.q0-9 { fill:rgb(198, 219, 239); }
+.q1-9 { fill:rgb(174, 197, 222); }
+.q2-9 { fill:rgb(150, 176, 206); }
+.q3-9 { fill:rgb(126, 154, 189); }
+.q4-9 { fill:rgb(103, 133, 173); }
+.q5-9 { fill:rgb(79, 112, 156); }
+.q6-9 { fill:rgb(55, 90, 140); }
+.q7-9 { fill:rgb(31, 69, 123); }
+.q8-9 { fill:rgb(8, 48, 107); }
+
+/* AP Circles */
+.symbol {
+  fill: darkred;
+  fill-opacity: .8;
+  stroke: #fff;
+  display: inline;
+}
+
+
+/* ### Map Panel ### */
+#map {
+  width: 960px;
+  /*height: 500px;*/
+  display: inline-block; /* FF2*/
+  vertical-align: top; /* BASELINE CORRECCIÓN*/;
+  text-align: left;
+}
+
+
+/* ### Settings Panel ### */
+#settingspanel {
+  width: 960px;
+  /*height: 500px;*/
+  background-color: #e8e8e8;
+  display: inline-block;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 10px;
+  vertical-align: top; /* BASELINE CORRECCIÓN*/
+  text-align: left;
+}
+
+#settingspanel .header {
+	font: italic normal 1.4em georgia, sans-serif;
+	margin-bottom: 0; 
+	margin-top: 0;
+}
+
+#settingspanel .options {
+	font: normal verdana, sans-serif;
+	margin-bottom: 0; 
+	margin-top: 5px;
+}
+
+#settingspanel .description {
+	font: normal 0.7em verdana, sans-serif;
+	margin-bottom: 0;
+	margin-top: 5px;
+	text-align:justify; 
+}
+
+#settingspanel .sourcelist {
+	font: normal 0.7em verdana, sans-serif;
+	padding-left:0;
+	list-style-type:square; 
+	list-style-position:inside;
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+
+#settingspanel .sourcelist a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px dotted black;
+}
+
+#settingspanel .sources {
+	font: normal 1em arial, sans-serif;
+	margin-bottom: 0;
+	width:800px;
+}
+
+
+/* ### Footer ### */
+#footer {
+	margin-top: 10px;
+	font: normal 1em arial, sans-serif;
+	width: 100%;
+}
+
+#footer a {
+	text-decoration: none;
+  	color: black;
+  	border-bottom: 1px dotted black;
+}
+
+
+/* ### Infobox Overlay ### */
+#infobox {
+  display: none;
+  position:absolute;
+  background: rgba(0,0,0,0.9);
+  color: white;
+  padding:5px;
+  margin-top: 1.3em;
+  position: absolute;
+  max-width: 200px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+ text-align: left;
+}
+
+#infobox .header {
+	font: bold .9em arial, sans-serif;
+	margin-bottom: 0; 
+}
+
+#infobox .variable {
+	font: normal .9em arial, sans-serif;
+	margin-bottom: 0; 
+}
